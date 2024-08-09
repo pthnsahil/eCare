@@ -101,7 +101,7 @@ def updateTime():
 def callNot():
     random.seed(datetime.datetime.now().second)
     choose = random.randrange(len(lines) - 1)
-    toast = winotify.Notification(app_id = "eCare",title = "It's been "+NotDuration+" minutes!", msg = lines[choose],duration = "short", icon = "C:/Users/HP/eCare/Code/bell-icon.png")
+    toast = winotify.Notification(app_id = "eCare",title = "It's been "+NotDuration+" minutes!", msg = lines[choose],duration = "short", icon = "D:/eCare_COPY/Code/Images/bell-icon.png")
     toast.set_audio(winotify.audio.Mail,loop = False)
     toast.show()
 NotifyTask = schedule.every(float(NotDuration)).minutes.do(callNot)
